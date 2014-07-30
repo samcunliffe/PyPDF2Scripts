@@ -15,7 +15,6 @@ def main(args):
     """run this script"""
     input_pdf = PdfFileReader(file(args.input, 'r'))
     output = PdfFileWriter()
-    #print "document1.pdf has %d pages." % input1.getNumPages()
     output.addPage(input_pdf.getPage(args.page))
     to_append = '_page%i' % args.page
     outputstream = file(append_to_pdf_filename(to_append, args.input), 'w')
